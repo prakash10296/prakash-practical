@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6406b33d11aa8f60103d7f7e"
+  },
+  "roles": [
+    {
+      "$oid": "6406b31d800d8f229c339125"
+    }
+  ],
+  "username": "admin",
+  "mobile": "9999999999",
+  "password": "$2a$08$h2cLv3yK2PQR8eVVuD6NN.vuysc7UIbrosXGGxuYuCOqLtI5sJzey",
+  "__v": 1
+},{
+  "_id": {
+    "$oid": "6406b5e54f1cd0e1d2483100"
+  },
+  "roles": [
+    {
+      "$oid": "6406b31d800d8f229c339123"
+    }
+  ],
+  "username": "user",
+  "mobile": "7897897890",
+  "password": "$2a$08$h2cLv3yK2PQR8eVVuD6NN.vuysc7UIbrosXGGxuYuCOqLtI5sJzey",
+  "__v": 1
+}]
