@@ -19,9 +19,6 @@ app.use(fileUpload({
   createParentPath: true,
 }));
 
-
-
-
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
@@ -44,7 +41,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome" });
 });
 
 // routes
@@ -71,16 +68,6 @@ function initial() {
 
         console.log("added 'user' to roles collection");
       });
-
-      // new Role({
-      //   name: "moderator"
-      // }).save(err => {
-      //   if (err) {
-      //     console.log("error", err);
-      //   }
-
-      //   console.log("added 'moderator' to roles collection");
-      // });
 
       new Role({
         name: "admin"

@@ -11,7 +11,6 @@ db.order = require("./order.model");
 db.role = require("./role.model");
 db.refreshToken = require("./refreshToken.model");
 
-//db.ROLES = ["user", "admin", "moderator"];
 db.ROLES = ["user", "admin"];
 
 module.exports = db;

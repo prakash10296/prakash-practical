@@ -8,6 +8,11 @@ const Order = mongoose.model(
       ref: 'User',
       required: true
     },
+    productId: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: 'Product',
+      required: true
+    },
     orderCode: String,
     orderDate: String,
     requiredDate: String,

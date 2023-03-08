@@ -3,11 +3,10 @@ const Order = db.order;
 
 // Create and Save a new Order
 exports.create = (req, res) => {
-    var user = req.user;
-
     // Create a Order
     const order = new Order({
-        userId: user.user,
+        userId: req.userId,
+        productId: req.body.productId,
         orderCode: "ORD" + Math.floor(Math.random() * 10000),
         orderDate: req.body.orderDate,
         requiredDate: req.body.requiredDate,

@@ -1,7 +1,6 @@
 const { authJwt } = require("../middlewares");
 const products = require("../controllers/product.controller.js");
 module.exports = app => {
-
   app.use(function (req, res, next) {
     res.header(
       "Access-Control-Allow-Headers",
@@ -30,6 +29,5 @@ module.exports = app => {
   // Create a new product
   router.delete("/", products.deleteAll);
 
-  //app.use("/api/products", [authJwt.verifyToken, authJwt.isAdmin], router);
-  app.use("/api/products", router);
+  app.use("/api/products", [authJwt.verifyToken, authJwt.isAdmin], router);
 };

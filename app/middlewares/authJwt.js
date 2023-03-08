@@ -15,10 +15,9 @@ const catchError = (err, res) => {
 }
 
 const verifyToken = (req, res, next) => {
-  console.log(req.headers);
-  let token = req.headers["x-access-token"];
-  //let token = req.body.token || req.param('token') || req.headers['x-access-token'];
+  //let token = req.headers["x-access-token"];
   //let token = req.headers.authorization;
+  let token = req.headers.authorization.split(" ")[1];
 
   if (!token) {
     return res.status(403).send({ message: "No token provided!" });
@@ -64,39 +63,7 @@ const isAdmin = (req, res, next) => {
   });
 };
 
-// const isModerator = (req, res, next) => {
-//   User.findById(req.userId).exec((err, user) => {
-//     if (err) {
-//       res.status(500).send({ message: err });
-//       return;
-//     }
-
-//     Role.find(
-//       {
-//         _id: { $in: user.roles }
-//       },
-//       (err, roles) => {
-//         if (err) {
-//           res.status(500).send({ message: err });
-//           return;
-//         }
-
-//         for (let i = 0; i < roles.length; i++) {
-//           if (roles[i].name === "moderator") {
-//             next();
-//             return;
-//           }
-//         }
-
-//         res.status(403).send({ message: "Require Moderator Role!" });
-//         return;
-//       }
-//     );
-//   });
-// };
-
 const isUser = (req, res, next) => {
-  console.log(req);
   User.findById(req.userId).exec((err, user) => {
     if (err) {
       res.status(500).send({ message: err });
@@ -127,10 +94,41 @@ const isUser = (req, res, next) => {
   });
 };
 
+const isUserOrAdmin = (req, res, next) => {
+  User.findById(req.userId).exec((err, user) => {
+    if (err) {
+      res.status(500).send({ message: err });
+      return;
+    }
+
+    Role.find(
+      {
+        _id: { $in: user.roles }
+      },
+      (err, roles) => {
+        if (err) {
+          res.status(500).send({ message: err });
+          return;
+        }
+
+        for (let i = 0; i < roles.length; i++) {
+          if (roles[i].name === "user" || roles[i].name === "admin") {
+            next();
+            return;
+          }
+        }
+
+        res.status(403).send({ message: "Require User OR Admin Role!" });
+        return;
+      }
+    );
+  });
+}
+
 const authJwt = {
   verifyToken,
   isAdmin,
-  //isModerator,
-  isUser
+  isUser,
+  isUserOrAdmin
 };
 module.exports = authJwt;

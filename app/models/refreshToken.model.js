@@ -21,9 +21,6 @@ RefreshTokenSchema.statics.createToken = async function (user) {
 
   let _token = uuidv4();
 
-  console.log(user);
-  console.log(user.roles[0].name);
-
   let _object = new this({
     token: _token,
     user: user._id,

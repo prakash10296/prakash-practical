@@ -3,36 +3,55 @@ const Product = db.product;
 const path = require("path");
 
 // Create and Save a new Product
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
     // Validate request
-    // if (!req.body.name) {
-    //     res.status(400).send({ message: "Content can not be empty!" });
-    //     return;
-    // }
-
-    if (!req.files) {
-        return res.status(400).send("No files were uploaded.");
+    if (!req.body.name) {
+        res.status(400).send({ message: "Name can not be empty!" });
+        return;
     }
-    const images = req.files.images;
-    const extensionName = path.extname(images.name); // fetch the file extension
-    const allowedExtension = ['.png', '.jpg', '.jpeg'];
 
-    if (!allowedExtension.includes(extensionName)) {
-        return res.status(422).send("Invalid Image");
-    }
-    const path1 = __dirname + "/../files/" + images.name;
-    images.mv(path1, (err) => {
-        if (err) {
-            return res.status(500).send(err);
+    var uploadedFiles = [];
+    uploadedData = req.files.images;
+    var allowedExtension = ['.png', '.jpg'];
+    if (uploadedData.length > 1) {
+        // for multiple image
+        for (let i = 0; i < uploadedData.length; i++) {
+            var extensionName = path.extname(uploadedData[i].name);
+            if (!allowedExtension.includes(extensionName)) {
+                return res.status(422).send("Upload only .png and .jpg format only.");
+            }
+            var newFileName = new Date().getTime() + '_' + uploadedData[i].name;
+            const uploadPath = path.join(__dirname, '..', '/uploads/', newFileName)
+            const fileName = newFileName;
+            uploadedFiles.push(fileName)
+            uploadedData[i].mv(uploadPath, function (err) {
+                if (err) {
+                    res.send(err);
+                }
+            });
         }
-        return res.send({ status: "success", path: path1 });
-    });
+    } else {
+        // for single image
+        var extensionName = path.extname(uploadedData.name);
+        if (!allowedExtension.includes(extensionName)) {
+            return res.status(422).send("Upload only .png and .jpg format only.");
+        }
+        var newFileName = new Date().getTime() + '_' + uploadedData.name;
+        const uploadPath = path.join(__dirname, '..', '/uploads/', newFileName)
+        const fileName = newFileName;
+        uploadedFiles.push(fileName)
+        uploadedData.mv(uploadPath, function (err) {
+            if (err) {
+                res.send(err);
+            }
+        })
+    }
 
     // Create a Product
     const product = new Product({
         name: req.body.name,
         size: req.body.size,
-        image: images.name,
+        images: uploadedFiles,
         colour: req.body.colour,
         price: req.body.price,
         quantity: req.body.quantity

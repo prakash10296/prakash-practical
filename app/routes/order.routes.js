@@ -30,6 +30,5 @@ module.exports = app => {
   // Create a new order
   router.delete("/", orders.deleteAll);
 
-  //app.use("/api/orders", [authJwt.verifyToken, authJwt.isUser], router);
-  app.use("/api/orders", router);
+  app.use("/api/orders", [authJwt.verifyToken, authJwt.isUserOrAdmin], router);
 };
