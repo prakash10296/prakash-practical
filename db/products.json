@@ -1,38 +1,11 @@
 [{
   "_id": {
-    "$oid": "6406cdfd1c72d25af8d8e31d"
+    "$oid": "64089c8dc1b29f2a94f3e601"
   },
-  "name": "prod1",
-  "size": "10",
-  "image": "img",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d08a24c5842a60b99342"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d14c753d7227b0f16a50"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d1aa1d5e8a56402da2d0"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d1ce737fd93404f5441a"
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d6731b25395540390e81"
-  },
+  "images": [
+    "1678285965939_download (1).png",
+    "1678285965942_download.jpg"
+  ],
   "name": "prod1",
   "size": "10",
   "colour": "red",
@@ -41,62 +14,16 @@
   "__v": 0
 },{
   "_id": {
-    "$oid": "6406d688de134568204b1163"
+    "$oid": "64089e4e1076bd27f8cc0540"
   },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d69341d87424505d4ffd"
-  },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d6b357f8016a680eef33"
-  },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d6dde26bf71dd0466377"
-  },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d738c558cb65d0c86302"
-  },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406d77f166b88673465c9f6"
-  },
-  "name": "prod1",
-  "size": "10",
-  "colour": "red",
-  "price": "10",
-  "quantity": "1",
+  "images": [
+    "1678286414458_download (1).png",
+    "1678286414459_download.jpg"
+  ],
+  "name": "prod1111",
+  "size": "101",
+  "colour": "red1",
+  "price": "101",
+  "quantity": "11",
   "__v": 0
 }]

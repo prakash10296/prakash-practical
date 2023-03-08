@@ -40,7 +40,7 @@
 					"script": {
 						"exec": [
 							"var jsonData = JSON.parse(responseBody);\r",
-							"postman.setEnvironmentVariable(\"token\", \"Bearer \" + jsonData.accessToken);"
+							"postman.setEnvironmentVariable(\"token\", \"Bearer \"+jsonData.accessToken);"
 						],
 						"type": "text/javascript"
 					}
@@ -51,7 +51,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"mobile\": \"9999999999\",\r\n    \"password\": \"123456\"\r\n}",
+					"raw": "{\r\n    \"mobile\": \"7897897891\",\r\n    \"password\": \"123456\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -72,9 +72,12 @@
 			"response": []
 		},
 		{
-			"name": "product add",
+			"name": "api all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
@@ -129,12 +132,79 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}api/products",
+					"raw": "{{url}}api/user",
 					"host": [
 						"{{url}}api"
 					],
 					"path": [
-						"products"
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "prod1",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "colour",
+							"value": "red",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": [
+								"/C:/Users/Prakash Parmar/Desktop/test/download (1).png",
+								"/C:/Users/Prakash Parmar/Desktop/test/download.jpg"
+							]
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/products/",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"products",
+						""
 					]
 				}
 			},
@@ -147,13 +217,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"prod1111\",\r\n    \"size\": \"10\",\r\n    \"image\": \"img\",\r\n    \"colour\": \"red\",\r\n    \"price\": \"10\",\r\n    \"quantity\": \"1\"\r\n}",
+					"raw": "{\r\n    \"name\": \"prod1111\",\r\n    \"size\": \"101\",\r\n    \"colour\": \"red1\",\r\n    \"price\": \"101\",\r\n    \"quantity\": \"11\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,13 +231,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}api/products/6406bc263f527d1eb4dffe9e",
+					"raw": "{{url}}api/products/64089e4e1076bd27f8cc0540",
 					"host": [
 						"{{url}}api"
 					],
 					"path": [
 						"products",
-						"6406bc263f527d1eb4dffe9e"
+						"64089e4e1076bd27f8cc0540"
 					]
 				}
 			},
@@ -180,7 +250,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -213,7 +283,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -254,7 +324,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -303,7 +373,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -342,7 +412,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orderDate\": \"10/10/2023\",\r\n    \"requiredDate\": \"10/10/2023\",\r\n    \"shippedDate\": \"10/10/2023\"\r\n}",
+					"raw": "{\r\n    \"productId\": \"64089e4e1076bd27f8cc0540\",\r\n    \"orderDate\": \"10/10/2023\",\r\n    \"requiredDate\": \"10/10/2023\",\r\n    \"shippedDate\": \"10/10/2023\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -368,7 +438,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -401,7 +471,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -434,7 +504,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -469,7 +539,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],
@@ -518,7 +588,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer {{token}}",
+						"value": "{{token}}",
 						"type": "default"
 					}
 				],

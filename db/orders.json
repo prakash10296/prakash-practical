@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "6408a187d135634e70417fe5"
+  },
+  "orderStatus": "NEW",
+  "userId": {
+    "$oid": "64089f7b1076bd27f8cc054f"
+  },
+  "productId": {
+    "$oid": "64089e4e1076bd27f8cc0540"
+  },
+  "orderCode": "ORD6950",
+  "orderDate": "10/10/2023",
+  "requiredDate": "10/10/2023",
+  "shippedDate": "10/10/2023",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408a35b4e6472441c6af9b6"
+  },
+  "orderStatus": "NEW",
+  "userId": {
+    "$oid": "64089f7b1076bd27f8cc054f"
+  },
+  "productId": {
+    "$oid": "64089e4e1076bd27f8cc0540"
+  },
+  "orderCode": "ORD7456",
+  "orderDate": "10/10/2023",
+  "requiredDate": "10/10/2023",
+  "shippedDate": "10/10/2023",
+  "__v": 0
+}]

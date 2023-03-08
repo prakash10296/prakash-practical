@@ -1,250 +1,76 @@
 [{
   "_id": {
-    "$oid": "6406b495f1693b63206a7eeb"
+    "$oid": "64089c3ad0023a6620b09544"
   },
-  "token": "5bb2a017-abd4-4e4a-9457-52976d4dc7b4",
+  "token": "071c186c-0291-4192-8151-6b64bb436688",
   "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
+    "$oid": "640889bb0cd6e2312436f5a0"
   },
   "expiryDate": {
     "$date": {
-      "$numberLong": "1678161165050"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406b60d003a33416484c61f"
-  },
-  "token": "6ff6a934-fb01-4b9b-9352-bda5d6046251",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678161541665"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c35dd6edd42bb0b2188d"
-  },
-  "token": "c80e69fb-f441-44de-b436-2ff4580b45af",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678164949169"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c47215ea19421c95e08f"
-  },
-  "token": "8e4ee3f3-086f-4b8d-82a1-6a6c05749f88",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678165226423"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c4c286f60d58e447ee67"
-  },
-  "token": "de889c89-22a5-4931-9c82-44508efa25a3",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678165306003"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c4e65f2ba663788d0973"
-  },
-  "token": "11335838-5457-4312-9189-aa0eea1db7e3",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678165342554"
-    }
-  },
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c51ca1a82650d47a14e9"
-  },
-  "token": "a48982f8-d55f-4c85-8961-2c45b8eb2948",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678165396585"
+      "$numberLong": "1678372282479"
     }
   },
   "role": "admin",
   "__v": 0
 },{
   "_id": {
-    "$oid": "6406c741e529af385c941b0e"
+    "$oid": "64089f951076bd27f8cc0555"
   },
-  "token": "4478f48f-c79a-4740-ada0-92afe848283c",
+  "token": "8ace86b8-0019-4154-b17c-db318ed0d440",
   "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
+    "$oid": "64089f7b1076bd27f8cc054f"
   },
   "expiryDate": {
     "$date": {
-      "$numberLong": "1678165945361"
+      "$numberLong": "1678373141233"
+    }
+  },
+  "role": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408a028f817835e500ac778"
+  },
+  "token": "6e853455-6053-459e-a25d-11b9817851e8",
+  "user": {
+    "$oid": "64089f7b1076bd27f8cc054f"
+  },
+  "expiryDate": {
+    "$date": {
+      "$numberLong": "1678373288465"
+    }
+  },
+  "role": "user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6408a2537a6b7b6b90899f46"
+  },
+  "token": "29ece2d4-0b9b-4e23-a900-56fb318cb4ae",
+  "user": {
+    "$oid": "640889bb0cd6e2312436f5a0"
+  },
+  "expiryDate": {
+    "$date": {
+      "$numberLong": "1678373843441"
     }
   },
   "role": "admin",
   "__v": 0
 },{
   "_id": {
-    "$oid": "6406c7d2e9b8d667cc791695"
+    "$oid": "6408a3574e6472441c6af9b2"
   },
-  "token": "db245ffa-d6e8-4086-9779-ebb7b083d44f",
+  "token": "7da849cc-edf0-46c6-ada3-6ba203b9b8e0",
   "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
+    "$oid": "64089f7b1076bd27f8cc054f"
   },
   "expiryDate": {
     "$date": {
-      "$numberLong": "1678166090640"
+      "$numberLong": "1678374103590"
     }
   },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406c848e9b8d667cc791699"
-  },
-  "token": "e30bf7c7-b181-4c58-ad6e-df4086254c7b",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678166208534"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406ca9be5fbe665cc0fab4b"
-  },
-  "token": "79b8318d-f028-46d7-82d1-79a878ee5c5c",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678166803904"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406cab7e5fbe665cc0fab4f"
-  },
-  "token": "903ac435-b515-4b87-bb85-ba525059db8e",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678166831925"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406cb3d6bb293580c3b53e6"
-  },
-  "token": "2567cb57-5a0f-4db0-9aec-4710de5dadb9",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678166965572"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406cbf4f0885018b85adab7"
-  },
-  "token": "248f0653-1931-4994-818a-6fd5365cde59",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678167148267"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406ccb382540f5850001720"
-  },
-  "token": "dd37681c-510f-4429-9f36-afd8693bf5e6",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678167339925"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406cdb67e7b261960cf3d55"
-  },
-  "token": "479a19e3-ef99-4143-a740-20250474318b",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678167598707"
-    }
-  },
-  "role": "admin",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "6406cdc67e7b261960cf3d59"
-  },
-  "token": "530cc856-b22c-4832-8042-f5cb7a9a01ff",
-  "user": {
-    "$oid": "6406b33d11aa8f60103d7f7e"
-  },
-  "expiryDate": {
-    "$date": {
-      "$numberLong": "1678167614896"
-    }
-  },
-  "role": "admin",
+  "role": "user",
   "__v": 0
 }]
