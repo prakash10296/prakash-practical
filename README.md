@@ -36,6 +36,7 @@ Role: Admin
     "mobile": "9999999999",
     "password": "123456"
 }
+```
 
 Role: User
 ```
@@ -43,3 +44,4 @@ Role: User
     "mobile": "7897897891",
     "password": "123456"
 }
+```
